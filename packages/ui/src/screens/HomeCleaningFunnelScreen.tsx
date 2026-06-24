@@ -114,15 +114,13 @@ function ServiceSummaryCard({ services }: { services: { name: string; detail?: s
 
 // ── step content ──────────────────────────────────────────────────────────────────────────────
 
-const ADDON_BASE = 'https://deax38zvkau9d.cloudfront.net/prod/assets/images/attribute-contents/';
-const addonImg = (file: string) => `${ADDON_BASE}${file}?f=webp&w=320`;
 const ADDONS = [
-  { title: 'Balcony Cleaning', price: 19, oldPrice: 25, img: addonImg('1729680028add-on_balcony-cleaning.webp') },
-  { title: 'Ironing and Folding', price: 25, oldPrice: 30, img: addonImg('1729679923add-on_ironing-folding.webp') },
-  { title: 'Fridge Cleaning', price: 19, oldPrice: 25, img: addonImg('1729679899add-on_fridge-cleaning.webp') },
-  { title: 'Wardrobe Cleaning', price: 25, oldPrice: 30, img: addonImg('1729679880add-on_wardrobe-cleaning.webp') },
-  { title: 'Cupboard Cleaning', price: 25, oldPrice: 30, img: addonImg('1729679954add-on_cupboard-cleaning.webp') },
-  { title: 'Party Cleaning', price: 25, oldPrice: 30, img: addonImg('1739459462party_category_500x500-thumbnail.webp') },
+  { title: 'Balcony Cleaning', price: 19, oldPrice: 25, img: assetUrl('add-on/balcony') },
+  { title: 'Ironing and Folding', price: 25, oldPrice: 30, img: assetUrl('add-on/ironing-folding') },
+  { title: 'Fridge Cleaning', price: 19, oldPrice: 25, img: assetUrl('add-on/fridge') },
+  { title: 'Wardrobe Cleaning', price: 25, oldPrice: 30, img: assetUrl('add-on/wardrobe') },
+  { title: 'Cupboard Cleaning', price: 25, oldPrice: 30, img: assetUrl('add-on/cupboard') },
+  { title: 'Party Cleaning', price: 25, oldPrice: 30, img: assetUrl('add-on/party-cleaning') },
 ];
 const DAYS = [
   { day: 'FRI', date: 19 },
