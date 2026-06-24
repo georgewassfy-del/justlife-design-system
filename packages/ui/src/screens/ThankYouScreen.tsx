@@ -25,7 +25,7 @@ import {
   Confetti,
   useTheme,
 } from '../index';
-import profilePicClean from '../assets/profilepic_clean.png';
+import { assetUrl } from '../assets/assets';
 
 /**
  * The **post-checkout Thank-You / booking-details screen** (Figma `aftercheckout-or-bookingdetails`),
@@ -49,12 +49,11 @@ const SLIDES: { bg: string; discount: string; headline: string }[] = [
   { bg: '#1FB457', discount: 'Promo 3', headline: 'Carousel slide 3' },
   { bg: '#15803D', discount: 'Promo 4', headline: 'Carousel slide 4' },
 ];
-// Web serves the approved local profile photo; native (no public dir) loads an equivalent remote photo.
-// The approved brand photo, bundled into the DS so BOTH web (Vite) and native (Metro) show the SAME
-// image. Vite resolves the import to a string URL; Metro resolves it to a numeric asset id which
-// `Image.resolveAssetSource` turns into a uri. Normalise both to a uri string for the `photo` prop.
-const PRO_PHOTO =
-  typeof profilePicClean === 'string' ? profilePicClean : Image.resolveAssetSource(profilePicClean).uri;
+// Assigned-professional card image, resolved from the DS asset manifest (thank-you-card asset — a
+// complete composed card: photo + shape + rating + name baked in).
+// `assetUrl` is imported from its defining module (not the '../index' barrel) because this is a
+// module-top-level const — a barrel import would hit the circular-import init crash (see funnel screen).
+const PRO_PHOTO = assetUrl('thank-you-card/01');
 const HERO_H = 448; // the big media carousel — fixed; the page scrolls over it (Figma hero = 448)
 const SECTION_TOP = 412; // where the rounded content section begins (overlaps the hero by 36, tracks HERO_H)
 const PROMO_BOTTOM = 100; // promo block position from the hero bottom (sits above the floating card)
@@ -247,7 +246,14 @@ function ContentSection({ safeAreaBottom, style }: { safeAreaBottom: number; sty
         title="Professional assigned"
         message={"We'll arrive between\n13.00-14.00."}
         onPress={() => {}}
-        professional={{ name: 'Leila Mary', rating: '4.7', reviewCount: '12', category: 'clean', photo: PRO_PHOTO }}
+        professionalCard={
+          <Image
+            source={{ uri: PRO_PHOTO }}
+            resizeMode="contain"
+            accessibilityLabel="Assigned professional, rated 4.7"
+            style={{ width: 96, height: 101 }}
+          />
+        }
         actions={[
           { label: 'Chat', icon: 'message-circle' },
           { label: 'Call', icon: 'phone' },
