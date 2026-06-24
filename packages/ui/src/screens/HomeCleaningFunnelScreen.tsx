@@ -37,6 +37,10 @@ import {
   useTheme,
   assetSource,
 } from '../index';
+// `assetUrl` is imported from its defining module (not the '../index' barrel) because PRO_PHOTOS
+// resolves it at module-load. The barrel re-exports this screen, so a top-level barrel call would run
+// before the asset module initialises (circular-import TDZ). Same public asset API, cycle-safe import.
+import { assetUrl } from '../assets/assets';
 
 /**
  * The **Home Cleaning booking funnel** (4 steps) — the SHARED screen rendered by BOTH Storybook (in the
@@ -51,10 +55,10 @@ import {
 // neutral people so they read as different professionals without a wrong-profession look. Swap for real
 // cleaning-pro photos when those assets exist.
 const PRO_PHOTOS = {
-  rewata: 'https://i.pravatar.cc/160?img=45',
-  jennefer: 'https://i.pravatar.cc/160?img=32',
-  maria: 'https://i.pravatar.cc/160?img=5',
-  daniel: 'https://i.pravatar.cc/160?img=1',
+  rewata: assetUrl('professional/cleaning-female-01'),
+  jennefer: assetUrl('professional/cleaning-female-02'),
+  maria: assetUrl('professional/cleaning-female-03'),
+  daniel: assetUrl('professional/cleaning-male-01'),
 };
 
 // ── shared screen helpers ───────────────────────────────────────────────────────────────────────
