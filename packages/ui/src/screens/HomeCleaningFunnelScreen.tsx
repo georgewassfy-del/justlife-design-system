@@ -67,19 +67,6 @@ const PRO_PHOTOS = {
  * The home-cleaning header band — token-built reproduction of `header-gradient-clean.svg`: a warm
  * paper base with two soft brand-blue glows (bottom-right + top-left). The "clean" service variant.
  */
-/** Green placeholder for brand artwork the DS doesn't own yet. */
-function MissingLogo({ label, width = 44 }: { label: string; width?: number }) {
-  return (
-    <View
-      style={{ width, height: 20, borderRadius: 4, backgroundColor: '#22C55E', alignItems: 'center', justifyContent: 'center' }}
-    >
-      <Text variant="labelXXSmall" style={{ color: '#FFFFFF' }} numberOfLines={1}>
-        {label}
-      </Text>
-    </View>
-  );
-}
-
 /** Price breakdown shown when the floating `CheckoutBar` is expanded. The **Service Fee** only appears
  *  at checkout (the final step) — it isn't shown on the earlier steps. */
 const BASE_SUMMARY_ROWS: PriceDetailsRow[] = [
@@ -318,7 +305,12 @@ function ServiceStep({ instructions, onEditInstructions }: { instructions: strin
             <Text variant="bodyMicro" color="secondary">
               Powered by
             </Text>
-            <MissingLogo label="logo" width={30} />
+            <Image
+              source={assetSource('logo/wordmark')}
+              resizeMode="contain"
+              accessibilityLabel="justlife"
+              style={{ width: 62, height: 20 }}
+            />
           </HStack>
         </HStack>
         <PillGroup
