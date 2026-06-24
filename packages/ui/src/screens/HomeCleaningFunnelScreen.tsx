@@ -35,6 +35,7 @@ import {
   Confetti,
   typographyToStyle,
   useTheme,
+  assetSource,
 } from '../index';
 
 /**
@@ -810,7 +811,12 @@ function CheckoutStep({
       {/* tabby — slim row */}
       <Card bordered padded={false} elevation="none" style={{ paddingVertical: t.size['12'], paddingHorizontal: t.size['12'] }}>
         <HStack gap="sm" align="center">
-          <MissingLogo label="tabby" />
+          <Image
+            source={assetSource('payment/tabby')}
+            resizeMode="contain"
+            accessibilityLabel="tabby"
+            style={{ width: 44, height: 20 }}
+          />
           <Text variant="bodyXSmall" color="secondary" style={{ flex: 1 }}>
             4 interest-free instalments-no extra fees
           </Text>
