@@ -177,3 +177,27 @@ export { HomeCleaningFunnelScreen } from './screens/HomeCleaningFunnelScreen';
 export { ThankYouScreen } from './screens/ThankYouScreen';
 export type { ThankYouLeading } from './screens/ThankYouScreen';
 export { ProfileScreen, type ProfileScreenProps } from './screens/ProfileScreen';
+
+// Assets — manifest-driven asset layer. Resolve stable ids (e.g. `professional/cleaning-female-01`)
+// to usable URLs; never reference raw asset paths. Manifest: ./assets/assets.manifest.json.
+export {
+  assetUrl,
+  assetSource,
+  tryAssetSource,
+  getAsset,
+  hasAsset,
+  assetIds,
+  assetIdsByKind,
+  assetKinds,
+  assetCount,
+  assetCountByKind,
+  listMissing,
+  configureAssets,
+  assetBaseUrl,
+  AssetNotFoundError,
+  type AssetId,
+  type AssetKind,
+  type AssetEntry,
+  type AssetSource,
+  type AssetManifest,
+} from './assets/assets';
