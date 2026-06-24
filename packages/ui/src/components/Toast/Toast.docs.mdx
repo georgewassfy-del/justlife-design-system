@@ -1,0 +1,87 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as ToastStories from './Toast.stories';
+
+<Meta of={ToastStories} />
+
+# Toast / Snackbar
+
+## Purpose
+
+`Toast` is a **transient, self-dismissing message bar** for brief feedback after an action — "Booking
+confirmed", "Voucher applied", "Couldn’t apply that code". It floats above the screen (and the bottom
+bars), auto-dismisses, and never blocks the UI.
+
+It is a **dark** bar (`background.inverse`) on purpose: that keeps it visually distinct from the light
+cards, sheets and banners, and gives every tone one consistent shell. The tone is carried by a **coloured
+leading icon**, not by tinting the whole bar.
+
+## Usage
+
+Drive toasts imperatively. Wrap your app/screen once in `ToastProvider`, then call `useToast()`:
+
+```tsx
+<ToastProvider position="bottom" insets={{ bottom: safeAreaBottom }}>
+  <App />
+</ToastProvider>;
+
+// anywhere inside:
+const toast = useToast();
+toast.success('Booking confirmed');
+toast.error('Code expired', { action: { label: 'Retry', onPress: retry } });
+const id = toast.show('Address removed', { action: { label: 'Undo', onPress: undo } });
+toast.dismiss(id);
+```
+
+<Canvas of={ToastStories.Interactive} />
+
+- One toast shows at a time; further calls **queue** and appear in turn.
+- **Auto-dismiss**: 6s when there's an action, 4s otherwise. Pass `duration: 0` to keep it sticky.
+- The **✕** shows when there's no action; force it either way with `dismissible`.
+- The provider announces each message to screen readers and positions the bar above the safe-area inset.
+
+## Do not use
+
+- ❌ For errors that need a decision or block progress — use a `BottomSheet`/dialog, not a toast.
+- ❌ For long or formatted content — keep it to one short line (wraps to two, then truncates).
+- ❌ For more than one action — a toast carries a single action (e.g. "Undo").
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## Variants
+
+Tone: `neutral · success · error · info · warning`. Optional `action`, optional `✕` (`dismissible`),
+`position` `top | bottom`.
+
+<Canvas of={ToastStories.Tones} />
+<Canvas of={ToastStories.WithAction} />
+<Controls />
+
+## States
+
+Animating **in** (slide + fade, `motion.decelerate`) · resting · animating **out** (`motion.accelerate`,
+then unmounts). Action and ✕ dim on press.
+
+## Accessibility
+
+- The bar is an `accessibilityLiveRegion="polite"` region; **error** toasts use `role="alert"` (assertive).
+- `ToastProvider` also calls `AccessibilityInfo.announceForAccessibility` on show, for screen readers.
+- Action and ✕ are real buttons with labels; ✕ is labelled "Dismiss" and uses `hitSlop` for a ≥44px target.
+- Because toasts auto-dismiss, never put information **only** in a toast — mirror critical state elsewhere.
+
+## Responsive behavior
+
+Full-width within the screen's horizontal inset (`space.md`), pinned to the chosen edge above the
+safe-area inset. The message flexes; the action and ✕ keep their size.
+
+## Platform notes
+
+Slide/fade run on the JS driver (`useNativeDriver: false`) so opacity + transform animate together on web
+and native; a `setTimeout` settles the end state where `requestAnimationFrame` is throttled (headless
+preview). The overlay fills its **positioned parent** rather than portalling out, so it stays inside a
+device frame. `AccessibilityInfo.announceForAccessibility` is a no-op on web.
+
+## Tokens used
+
+`background.inverse` (surface) · `text.inverse` (message) · `text.brand` (action) · `icon.success`
+`icon.error` `icon.info` `icon.warning` `icon.inverse` (leading glyph + ✕) · `radius.xl` ·
+`elevation.overlay` · `space.*` · `size.32/48/80` · `opacity.75` · `motion.duration.*` `motion.easing.*` ·
+`zIndex.toast` · `safeArea.*`.
