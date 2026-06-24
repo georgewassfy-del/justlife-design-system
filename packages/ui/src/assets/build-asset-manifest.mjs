@@ -68,6 +68,10 @@ function classifyPhoto(stem) {
     const m = stem.match(/-(\d+)$/);
     return { id: `thank-you-card/${pad2(m[1])}`, kind: 'thank-you-card' };
   }
+  // Add-on photo tiles (Home Cleaning funnel) — `add-on-<slug>.png` → add-on/<slug>.
+  if (/^add-on-/.test(stem)) {
+    return { id: `add-on/${stem.replace(/^add-on-/, '')}`, kind: 'add-on' };
+  }
   // Generic avatars + state demos
   if (stem === 'avatar-active') return { id: 'avatar/active', kind: 'avatar' };
   if (stem === 'avatar-disabled') return { id: 'avatar/disabled', kind: 'avatar' };

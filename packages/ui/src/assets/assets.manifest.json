@@ -4,6 +4,7 @@
   "source": "georgewassfy-del/justlife-design-system @ main — root asset folders",
   "baseUrl": "https://raw.githubusercontent.com/georgewassfy-del/justlife-design-system/main/",
   "kinds": [
+    "add-on",
     "avatar",
     "banner",
     "flag",
@@ -17,8 +18,9 @@
     "shape",
     "thank-you-card"
   ],
-  "count": 233,
+  "count": 239,
   "countByKind": {
+    "add-on": 6,
     "avatar": 24,
     "banner": 5,
     "flag": 6,
@@ -33,6 +35,36 @@
     "thank-you-card": 4
   },
   "assets": {
+    "add-on/balcony": {
+      "path": "Photos (export PNG)/add-on-balcony.png",
+      "kind": "add-on",
+      "format": "png"
+    },
+    "add-on/cupboard": {
+      "path": "Photos (export PNG)/add-on-cupboard.png",
+      "kind": "add-on",
+      "format": "png"
+    },
+    "add-on/fridge": {
+      "path": "Photos (export PNG)/add-on-fridge.png",
+      "kind": "add-on",
+      "format": "png"
+    },
+    "add-on/ironing-folding": {
+      "path": "Photos (export PNG)/add-on-ironing-folding.png",
+      "kind": "add-on",
+      "format": "png"
+    },
+    "add-on/party-cleaning": {
+      "path": "Photos (export PNG)/add-on-party-cleaning.png",
+      "kind": "add-on",
+      "format": "png"
+    },
+    "add-on/wardrobe": {
+      "path": "Photos (export PNG)/add-on-wardrobe.png",
+      "kind": "add-on",
+      "format": "png"
+    },
     "avatar/01": {
       "path": "Photos (export PNG)/Avatar-1.png",
       "kind": "avatar",
