@@ -1,0 +1,1203 @@
+{
+  "$schema": "justlife-ds-assets/v1",
+  "version": "0.1.0",
+  "source": "georgewassfy-del/justlife-design-system @ main — root asset folders",
+  "baseUrl": "https://raw.githubusercontent.com/georgewassfy-del/justlife-design-system/main/",
+  "kinds": [
+    "avatar",
+    "banner",
+    "flag",
+    "icon",
+    "icon3d",
+    "payment",
+    "professional",
+    "professional-card",
+    "service",
+    "shape"
+  ],
+  "count": 230,
+  "countByKind": {
+    "avatar": 24,
+    "banner": 5,
+    "flag": 6,
+    "icon": 100,
+    "icon3d": 41,
+    "payment": 8,
+    "professional": 20,
+    "professional-card": 8,
+    "service": 14,
+    "shape": 4
+  },
+  "assets": {
+    "avatar/01": {
+      "path": "Photos (export PNG)/Avatar-1.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/02": {
+      "path": "Photos (export PNG)/Avatar-2.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/03": {
+      "path": "Photos (export PNG)/Avatar-3.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/04": {
+      "path": "Photos (export PNG)/Avatar-4.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/05": {
+      "path": "Photos (export PNG)/Avatar-5.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/06": {
+      "path": "Photos (export PNG)/Avatar-6.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/07": {
+      "path": "Photos (export PNG)/Avatar-7.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/08": {
+      "path": "Photos (export PNG)/Avatar-8.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/09": {
+      "path": "Photos (export PNG)/Avatar-9.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/10": {
+      "path": "Photos (export PNG)/Avatar-10.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/11": {
+      "path": "Photos (export PNG)/Avatar-11.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/12": {
+      "path": "Photos (export PNG)/Avatar-12.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/13": {
+      "path": "Photos (export PNG)/Avatar-13.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/14": {
+      "path": "Photos (export PNG)/Avatar-14.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/15": {
+      "path": "Photos (export PNG)/Avatar-15.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/16": {
+      "path": "Photos (export PNG)/Avatar-16.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/17": {
+      "path": "Photos (export PNG)/Avatar-17.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/18": {
+      "path": "Photos (export PNG)/Avatar-18.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/19": {
+      "path": "Photos (export PNG)/Avatar-19.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/20": {
+      "path": "Photos (export PNG)/Avatar-20.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/21": {
+      "path": "Photos (export PNG)/Avatar-21.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/active": {
+      "path": "Photos (export PNG)/avatar-active.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/default": {
+      "path": "Photos (export PNG)/Avatar.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "avatar/disabled": {
+      "path": "Photos (export PNG)/avatar-disabled.png",
+      "kind": "avatar",
+      "format": "png"
+    },
+    "banner/beauty-pinktober": {
+      "path": "Photos (export PNG)/beauty-pinktober-en-99.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "banner/handyman": {
+      "path": "Photos (export PNG)/common-sv-handyman-en-hm50.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "banner/healthcare-flu-vaccine": {
+      "path": "Photos (export PNG)/healthcare-flu-vaccine-en-vax30-dxb-all.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "banner/healthcare-lab-tests": {
+      "path": "Photos (export PNG)/healthcare-lab-tests-en-labt50-dxb-visitor.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "banner/pest-control": {
+      "path": "Photos (export PNG)/common-sv-pest-control-en-50pestc.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "flag/bahrain": {
+      "path": "Flags (export SVG)/bahrain.svg",
+      "kind": "flag",
+      "format": "svg"
+    },
+    "flag/ksa": {
+      "path": "Flags (export SVG)/ksa.svg",
+      "kind": "flag",
+      "format": "svg"
+    },
+    "flag/kuwait": {
+      "path": "Flags (export SVG)/kuwait.svg",
+      "kind": "flag",
+      "format": "svg"
+    },
+    "flag/oman": {
+      "path": "Flags (export SVG)/oman.svg",
+      "kind": "flag",
+      "format": "svg"
+    },
+    "flag/qatar": {
+      "path": "Flags (export SVG)/qatar.svg",
+      "kind": "flag",
+      "format": "svg"
+    },
+    "flag/uae": {
+      "path": "Flags (export SVG)/uae.svg",
+      "kind": "flag",
+      "format": "svg"
+    },
+    "icon/arrow-down": {
+      "path": "2D Icons (export SVG)/arrow-down.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/arrow-left": {
+      "path": "2D Icons (export SVG)/arrow-left.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/arrow-right": {
+      "path": "2D Icons (export SVG)/arrow-right.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/arrow-up": {
+      "path": "2D Icons (export SVG)/arrow-up.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/badge": {
+      "path": "2D Icons (export SVG)/badge.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/badge-question-mark": {
+      "path": "2D Icons (export SVG)/badge-question-mark.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/banknote": {
+      "path": "2D Icons (export SVG)/banknote.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/battery": {
+      "path": "2D Icons (export SVG)/battery.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/battery-warning": {
+      "path": "2D Icons (export SVG)/battery-warning.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/bell": {
+      "path": "2D Icons (export SVG)/bell.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/bookmark": {
+      "path": "2D Icons (export SVG)/bookmark.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/box": {
+      "path": "2D Icons (export SVG)/box.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/building": {
+      "path": "2D Icons (export SVG)/building.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/calendar": {
+      "path": "2D Icons (export SVG)/calendar.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/calendar-check": {
+      "path": "2D Icons (export SVG)/calendar-check.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/camera": {
+      "path": "2D Icons (export SVG)/camera.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/chat": {
+      "path": "2D Icons (export SVG)/chat.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/check": {
+      "path": "2D Icons (export SVG)/check.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/chevron-down": {
+      "path": "2D Icons (export SVG)/chevron-down.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/chevron-left": {
+      "path": "2D Icons (export SVG)/chevron-left.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/chevron-right": {
+      "path": "2D Icons (export SVG)/chevron-right.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/chevron-up": {
+      "path": "2D Icons (export SVG)/chevron-up.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/chevrons-right": {
+      "path": "2D Icons (export SVG)/chevrons-right.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/clock": {
+      "path": "2D Icons (export SVG)/clock.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/cloud": {
+      "path": "2D Icons (export SVG)/cloud.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/copy": {
+      "path": "2D Icons (export SVG)/copy.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/credit-card": {
+      "path": "2D Icons (export SVG)/credit-card.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/currency": {
+      "path": "2D Icons (export SVG)/currency.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/download": {
+      "path": "2D Icons (export SVG)/download.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/ellipsis": {
+      "path": "2D Icons (export SVG)/ellipsis.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/external-link": {
+      "path": "2D Icons (export SVG)/external-link.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/eye": {
+      "path": "2D Icons (export SVG)/eye.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/eye-off": {
+      "path": "2D Icons (export SVG)/eye-off.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/file": {
+      "path": "2D Icons (export SVG)/file.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/flag": {
+      "path": "2D Icons (export SVG)/flag.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/folder": {
+      "path": "2D Icons (export SVG)/folder.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/gift": {
+      "path": "2D Icons (export SVG)/gift.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/globe": {
+      "path": "2D Icons (export SVG)/globe.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/grid-2x2": {
+      "path": "2D Icons (export SVG)/grid-2x2.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/headset": {
+      "path": "2D Icons (export SVG)/headset.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/heart": {
+      "path": "2D Icons (export SVG)/heart.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/history": {
+      "path": "2D Icons (export SVG)/history.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/house": {
+      "path": "2D Icons (export SVG)/house.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/image": {
+      "path": "2D Icons (export SVG)/image.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/info": {
+      "path": "2D Icons (export SVG)/info.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/key": {
+      "path": "2D Icons (export SVG)/key.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/link": {
+      "path": "2D Icons (export SVG)/link.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/list": {
+      "path": "2D Icons (export SVG)/list.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/list-filter": {
+      "path": "2D Icons (export SVG)/list-filter.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/lock": {
+      "path": "2D Icons (export SVG)/lock.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/mail": {
+      "path": "2D Icons (export SVG)/mail.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/map": {
+      "path": "2D Icons (export SVG)/map.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/map-pin": {
+      "path": "2D Icons (export SVG)/map-pin.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/menu": {
+      "path": "2D Icons (export SVG)/menu.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/minus": {
+      "path": "2D Icons (export SVG)/minus.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/moon": {
+      "path": "2D Icons (export SVG)/moon.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/paperclip": {
+      "path": "2D Icons (export SVG)/paperclip.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/pause": {
+      "path": "2D Icons (export SVG)/pause.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/pencil": {
+      "path": "2D Icons (export SVG)/pencil.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/percent": {
+      "path": "2D Icons (export SVG)/percent.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/phone": {
+      "path": "2D Icons (export SVG)/phone.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/play": {
+      "path": "2D Icons (export SVG)/play.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/plus": {
+      "path": "2D Icons (export SVG)/plus.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/printer": {
+      "path": "2D Icons (export SVG)/printer.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/qr-code": {
+      "path": "2D Icons (export SVG)/qr-code.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/receipt": {
+      "path": "2D Icons (export SVG)/receipt.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/refresh-ccw": {
+      "path": "2D Icons (export SVG)/refresh-ccw.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/repeat": {
+      "path": "2D Icons (export SVG)/repeat.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/scan": {
+      "path": "2D Icons (export SVG)/scan.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/scissors": {
+      "path": "2D Icons (export SVG)/scissors.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/search": {
+      "path": "2D Icons (export SVG)/search.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/send": {
+      "path": "2D Icons (export SVG)/send.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/settings": {
+      "path": "2D Icons (export SVG)/settings.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/share": {
+      "path": "2D Icons (export SVG)/share.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/shield": {
+      "path": "2D Icons (export SVG)/shield.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/shopping-bag": {
+      "path": "2D Icons (export SVG)/shopping-bag.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/shopping-cart": {
+      "path": "2D Icons (export SVG)/shopping-cart.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/signal": {
+      "path": "2D Icons (export SVG)/signal.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/smile": {
+      "path": "2D Icons (export SVG)/smile.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/sparkle": {
+      "path": "2D Icons (export SVG)/sparkle.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/spray-can": {
+      "path": "2D Icons (export SVG)/spray-can.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/square-arrow-right-exit": {
+      "path": "2D Icons (export SVG)/square-arrow-right-exit.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/star": {
+      "path": "2D Icons (export SVG)/star.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/sun": {
+      "path": "2D Icons (export SVG)/sun.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/tag": {
+      "path": "2D Icons (export SVG)/tag.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/thumbs-down": {
+      "path": "2D Icons (export SVG)/thumbs-down.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/thumbs-up": {
+      "path": "2D Icons (export SVG)/thumbs-up.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/ticket": {
+      "path": "2D Icons (export SVG)/ticket.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/timer": {
+      "path": "2D Icons (export SVG)/timer.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/trash": {
+      "path": "2D Icons (export SVG)/trash.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/truck": {
+      "path": "2D Icons (export SVG)/truck.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/upload": {
+      "path": "2D Icons (export SVG)/upload.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/user": {
+      "path": "2D Icons (export SVG)/user.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/user-plus": {
+      "path": "2D Icons (export SVG)/user-plus.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/users": {
+      "path": "2D Icons (export SVG)/users.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/wallet": {
+      "path": "2D Icons (export SVG)/wallet.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/wifi": {
+      "path": "2D Icons (export SVG)/wifi.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/wrench": {
+      "path": "2D Icons (export SVG)/wrench.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/x-mark": {
+      "path": "2D Icons (export SVG)/x-mark.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon/zap": {
+      "path": "2D Icons (export SVG)/zap.svg",
+      "kind": "icon",
+      "format": "svg"
+    },
+    "icon3d/ac-cleaning": {
+      "path": "3D Icons (export PNG)/ac-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/babysitting": {
+      "path": "3D Icons (export PNG)/babysitting.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/car-wash": {
+      "path": "3D Icons (export PNG)/car-wash.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/cleaning-old": {
+      "path": "3D Icons (export PNG)/cleaning-old.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/cleaning-subscription": {
+      "path": "3D Icons (export PNG)/cleaning-subscription.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/cleaning-subscription2": {
+      "path": "3D Icons (export PNG)/cleaning-subscription2.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/deep-cleaning": {
+      "path": "3D Icons (export PNG)/deep-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/disinfection": {
+      "path": "3D Icons (export PNG)/disinfection.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/doctor-at-home": {
+      "path": "3D Icons (export PNG)/doctor-at-home.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/flu-vaccine": {
+      "path": "3D Icons (export PNG)/flu-vaccine.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/furniture-cleaning": {
+      "path": "3D Icons (export PNG)/furniture-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/general-cleaning": {
+      "path": "3D Icons (export PNG)/general-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/hair-care": {
+      "path": "3D Icons (export PNG)/hair-care.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/handymen": {
+      "path": "3D Icons (export PNG)/handymen.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/healthcare": {
+      "path": "3D Icons (export PNG)/healthcare.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/home-inspection": {
+      "path": "3D Icons (export PNG)/home-inspection.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/home-painting": {
+      "path": "3D Icons (export PNG)/home-painting.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/instant-home-cleaning": {
+      "path": "3D Icons (export PNG)/instant-home-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/iv-therapy": {
+      "path": "3D Icons (export PNG)/iv-therapy.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/lab-tests": {
+      "path": "3D Icons (export PNG)/lab-tests.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/lashes-brows": {
+      "path": "3D Icons (export PNG)/lashes-brows.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/laundry-dry-cleaning": {
+      "path": "3D Icons (export PNG)/laundry-dry-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/men-s-spa": {
+      "path": "3D Icons (export PNG)/men-s-spa.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/nail-couture": {
+      "path": "3D Icons (export PNG)/nail-couture.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/nurse-care": {
+      "path": "3D Icons (export PNG)/nurse-care.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/online-therapy": {
+      "path": "3D Icons (export PNG)/online-therapy.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/packers-and-movers": {
+      "path": "3D Icons (export PNG)/packers-and-movers.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/packers-movers": {
+      "path": "3D Icons (export PNG)/packers-movers.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/pcr-tests": {
+      "path": "3D Icons (export PNG)/pcr-tests.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/personal-trainer": {
+      "path": "3D Icons (export PNG)/personal-trainer.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/pest-control": {
+      "path": "3D Icons (export PNG)/pest-control.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/pet-grooming": {
+      "path": "3D Icons (export PNG)/pet-grooming.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/physiotherapy": {
+      "path": "3D Icons (export PNG)/physiotherapy.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/premium-grooming": {
+      "path": "3D Icons (export PNG)/premium-grooming.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/salon": {
+      "path": "3D Icons (export PNG)/salon.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/salon-spa": {
+      "path": "3D Icons (export PNG)/salon-spa.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/sneaker-cleaning": {
+      "path": "3D Icons (export PNG)/sneaker-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/spray-tanning": {
+      "path": "3D Icons (export PNG)/spray-tanning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/water-tank-cleaning": {
+      "path": "3D Icons (export PNG)/water-tank-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/window-cleaning": {
+      "path": "3D Icons (export PNG)/window-cleaning.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "icon3d/women-s-spa": {
+      "path": "3D Icons (export PNG)/women-s-spa.png",
+      "kind": "icon3d",
+      "format": "png"
+    },
+    "payment/amex": {
+      "path": "Payment Cards (export SVG)/amex.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "payment/apple-pay": {
+      "path": "Payment Cards (export SVG)/apple-pay.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "payment/careem": {
+      "path": "Payment Cards (export SVG)/careem.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "payment/google-pay": {
+      "path": "Payment Cards (export SVG)/google-pay.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "payment/master": {
+      "path": "Payment Cards (export SVG)/master.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "payment/tabby": {
+      "path": "Payment Cards (export SVG)/tabby.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "payment/tamara": {
+      "path": "Payment Cards (export SVG)/tamara-logo-en.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "payment/visa": {
+      "path": "Payment Cards (export SVG)/visa.svg",
+      "kind": "payment",
+      "format": "svg"
+    },
+    "professional-card/01": {
+      "path": "Photos (export PNG)/professional-card.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional-card/02": {
+      "path": "Photos (export PNG)/professional-card-2.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional-card/03": {
+      "path": "Photos (export PNG)/professional-card-3.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional-card/04": {
+      "path": "Photos (export PNG)/professional-card-4.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional-card/05": {
+      "path": "Photos (export PNG)/professional-card-5.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional-card/06": {
+      "path": "Photos (export PNG)/professional-card-6.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional-card/07": {
+      "path": "Photos (export PNG)/professional-card-7.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional-card/08": {
+      "path": "Photos (export PNG)/professional-card-8.png",
+      "kind": "professional-card",
+      "format": "png"
+    },
+    "professional/cleaning-female-01": {
+      "path": "Photos (export PNG)/professional-cleaning-female-01.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-female-02": {
+      "path": "Photos (export PNG)/professional-cleaning-female-02.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-female-03": {
+      "path": "Photos (export PNG)/professional-cleaning-female-03.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-female-04": {
+      "path": "Photos (export PNG)/professional-cleaning-female-04.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-female-05": {
+      "path": "Photos (export PNG)/professional-cleaning-female-05.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-female-06": {
+      "path": "Photos (export PNG)/professional-cleaning-female-06.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-female-07": {
+      "path": "Photos (export PNG)/professional-cleaning-female-07.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-male-01": {
+      "path": "Photos (export PNG)/professional-cleaning-male-01.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/cleaning-male-02": {
+      "path": "Photos (export PNG)/professional-cleaning-male-02.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "cleaning"
+    },
+    "professional/doctor-female-01": {
+      "path": "Photos (export PNG)/professional-doctor-female-01.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "doctor"
+    },
+    "professional/doctor-female-02": {
+      "path": "Photos (export PNG)/professional-doctor-female-02.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "doctor"
+    },
+    "professional/doctor-female-03": {
+      "path": "Photos (export PNG)/professional-doctor-female-03.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "doctor"
+    },
+    "professional/handyman-01": {
+      "path": "Photos (export PNG)/professional-handyman-01.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "handyman"
+    },
+    "professional/handyman-02": {
+      "path": "Photos (export PNG)/professional-handyman-02.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "handyman"
+    },
+    "professional/nurse-female-01": {
+      "path": "Photos (export PNG)/professional-nurse-female-01.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "nurse"
+    },
+    "professional/nurse-female-02": {
+      "path": "Photos (export PNG)/professional-nurse-female-02.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "nurse"
+    },
+    "professional/nurse-female-03": {
+      "path": "Photos (export PNG)/professional-nurse-female-03.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "nurse"
+    },
+    "professional/salon-female-01": {
+      "path": "Photos (export PNG)/professional-salon-female-01.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "salon"
+    },
+    "professional/salon-female-02": {
+      "path": "Photos (export PNG)/professional-salon-female-02.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "salon"
+    },
+    "professional/salon-male-01": {
+      "path": "Photos (export PNG)/professional-salon-male-01.png",
+      "kind": "professional",
+      "format": "png",
+      "category": "salon"
+    },
+    "service/service-image": {
+      "path": "Photos (export PNG)/Service Image.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-01": {
+      "path": "Photos (export PNG)/Service Image-1.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-02": {
+      "path": "Photos (export PNG)/Service Image-2.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-03": {
+      "path": "Photos (export PNG)/Service Image-3.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-04": {
+      "path": "Photos (export PNG)/Service Image-4.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-05": {
+      "path": "Photos (export PNG)/Service Image-5.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-06": {
+      "path": "Photos (export PNG)/Service Image-6.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-07": {
+      "path": "Photos (export PNG)/Service Image-7.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-08": {
+      "path": "Photos (export PNG)/Service Image-8.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-09": {
+      "path": "Photos (export PNG)/Service Image-9.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-10": {
+      "path": "Photos (export PNG)/Service Image-10.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-11": {
+      "path": "Photos (export PNG)/Service Image-11.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-12": {
+      "path": "Photos (export PNG)/Service Image-12.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "service/service-image-13": {
+      "path": "Photos (export PNG)/Service Image-13.png",
+      "kind": "service",
+      "format": "png"
+    },
+    "shape/assist": {
+      "path": "Shapes (export SVG)/assist.svg",
+      "kind": "shape",
+      "format": "svg"
+    },
+    "shape/care": {
+      "path": "Shapes (export SVG)/care.svg",
+      "kind": "shape",
+      "format": "svg"
+    },
+    "shape/clean": {
+      "path": "Shapes (export SVG)/clean.svg",
+      "kind": "shape",
+      "format": "svg"
+    },
+    "shape/heal": {
+      "path": "Shapes (export SVG)/heal.svg",
+      "kind": "shape",
+      "format": "svg"
+    }
+  }
+}
