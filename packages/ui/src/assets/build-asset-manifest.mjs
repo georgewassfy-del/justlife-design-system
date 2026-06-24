@@ -26,6 +26,7 @@ const FOLDERS = {
   'payment': 'Payment Cards (export SVG)',
   'flag': 'Flags (export SVG)',
   'shape': 'Shapes (export SVG)',
+  'logo': 'logo',
 };
 
 const BASE_URL = 'https://raw.githubusercontent.com/georgewassfy-del/justlife-design-system/main/';
@@ -46,6 +47,8 @@ function classify(folderKey, file) {
       return { id: `flag/${stem}`, kind: 'flag' };
     case 'shape':
       return { id: `shape/${stem}`, kind: 'shape' };
+    case 'logo':
+      return { id: `logo/${stem}`, kind: 'logo' };
     case 'payment': {
       // tamara-logo-en -> tamara ; apple-pay / google-pay / master / visa / tabby / amex / careem unchanged
       const slug = stem.replace(/-logo(-[a-z]{2})?$/, '');
@@ -59,6 +62,11 @@ function classify(folderKey, file) {
 }
 
 function classifyPhoto(stem) {
+  // Thank-You professional-card images — composed cards used on the Thank-You screen.
+  if (/^thank-you-professional-card-\d+$/.test(stem)) {
+    const m = stem.match(/-(\d+)$/);
+    return { id: `thank-you-card/${pad2(m[1])}`, kind: 'thank-you-card' };
+  }
   // Generic avatars + state demos
   if (stem === 'avatar-active') return { id: 'avatar/active', kind: 'avatar' };
   if (stem === 'avatar-disabled') return { id: 'avatar/disabled', kind: 'avatar' };

@@ -13,7 +13,8 @@
     "professional",
     "professional-card",
     "service",
-    "shape"
+    "shape",
+    "thank-you-card"
   ],
   "count": 230,
   "countByKind": {
@@ -24,9 +25,10 @@
     "icon3d": 41,
     "payment": 8,
     "professional": 20,
-    "professional-card": 8,
+    "professional-card": 4,
     "service": 14,
-    "shape": 4
+    "shape": 4,
+    "thank-you-card": 4
   },
   "assets": {
     "avatar/01": {
@@ -950,7 +952,7 @@
       "format": "svg"
     },
     "professional-card/01": {
-      "path": "Photos (export PNG)/professional-card.png",
+      "path": "Photos (export PNG)/professional-card-1.png",
       "kind": "professional-card",
       "format": "png"
     },
@@ -966,26 +968,6 @@
     },
     "professional-card/04": {
       "path": "Photos (export PNG)/professional-card-4.png",
-      "kind": "professional-card",
-      "format": "png"
-    },
-    "professional-card/05": {
-      "path": "Photos (export PNG)/professional-card-5.png",
-      "kind": "professional-card",
-      "format": "png"
-    },
-    "professional-card/06": {
-      "path": "Photos (export PNG)/professional-card-6.png",
-      "kind": "professional-card",
-      "format": "png"
-    },
-    "professional-card/07": {
-      "path": "Photos (export PNG)/professional-card-7.png",
-      "kind": "professional-card",
-      "format": "png"
-    },
-    "professional-card/08": {
-      "path": "Photos (export PNG)/professional-card-8.png",
       "kind": "professional-card",
       "format": "png"
     },
@@ -1198,6 +1180,26 @@
       "path": "Shapes (export SVG)/heal.svg",
       "kind": "shape",
       "format": "svg"
+    },
+    "thank-you-card/01": {
+      "path": "Photos (export PNG)/thank-you-professional-card-1.png",
+      "kind": "thank-you-card",
+      "format": "png"
+    },
+    "thank-you-card/02": {
+      "path": "Photos (export PNG)/thank-you-professional-card-2.png",
+      "kind": "thank-you-card",
+      "format": "png"
+    },
+    "thank-you-card/03": {
+      "path": "Photos (export PNG)/thank-you-professional-card-3.png",
+      "kind": "thank-you-card",
+      "format": "png"
+    },
+    "thank-you-card/04": {
+      "path": "Photos (export PNG)/thank-you-professional-card-4.png",
+      "kind": "thank-you-card",
+      "format": "png"
     }
   }
 }
