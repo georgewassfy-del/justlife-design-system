@@ -9,6 +9,7 @@
     "flag",
     "icon",
     "icon3d",
+    "logo",
     "payment",
     "professional",
     "professional-card",
@@ -16,13 +17,14 @@
     "shape",
     "thank-you-card"
   ],
-  "count": 230,
+  "count": 233,
   "countByKind": {
     "avatar": 24,
     "banner": 5,
     "flag": 6,
     "icon": 100,
     "icon3d": 41,
+    "logo": 3,
     "payment": 8,
     "professional": 20,
     "professional-card": 4,
@@ -910,6 +912,21 @@
       "path": "3D Icons (export PNG)/women-s-spa.png",
       "kind": "icon3d",
       "format": "png"
+    },
+    "logo/full": {
+      "path": "Logo/style=full.svg",
+      "kind": "logo",
+      "format": "svg"
+    },
+    "logo/mark": {
+      "path": "Logo/style=mark.svg",
+      "kind": "logo",
+      "format": "svg"
+    },
+    "logo/wordmark": {
+      "path": "Logo/style=wordmark.svg",
+      "kind": "logo",
+      "format": "svg"
     },
     "payment/amex": {
       "path": "Payment Cards (export SVG)/amex.svg",

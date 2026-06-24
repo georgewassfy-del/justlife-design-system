@@ -26,7 +26,7 @@ const FOLDERS = {
   'payment': 'Payment Cards (export SVG)',
   'flag': 'Flags (export SVG)',
   'shape': 'Shapes (export SVG)',
-  'logo': 'logo',
+  'logo': 'Logo',
 };
 
 const BASE_URL = 'https://raw.githubusercontent.com/georgewassfy-del/justlife-design-system/main/';
@@ -48,7 +48,8 @@ function classify(folderKey, file) {
     case 'shape':
       return { id: `shape/${stem}`, kind: 'shape' };
     case 'logo':
-      return { id: `logo/${stem}`, kind: 'logo' };
+      // Logo filenames are `style=full.svg` / `style=mark.svg` / `style=wordmark.svg` → logo/<variant>.
+      return { id: `logo/${stem.replace(/^style=/, '')}`, kind: 'logo' };
     case 'payment': {
       // tamara-logo-en -> tamara ; apple-pay / google-pay / master / visa / tabby / amex / careem unchanged
       const slug = stem.replace(/-logo(-[a-z]{2})?$/, '');
