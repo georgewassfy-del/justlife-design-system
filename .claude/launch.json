@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "storybook",
+      "runtimeExecutable": "corepack",
+      "runtimeArgs": ["pnpm@9.15.0", "--filter", "@justlife/storybook", "run", "dev"],
+      "port": 6006,
+      "env": { "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0" }
+    },
+    {
+      "name": "ds-storybook",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "ds-storybook", "run", "dev"],
+      "port": 5180
+    }
+  ]
+}

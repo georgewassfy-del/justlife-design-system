@@ -1,0 +1,82 @@
+<!-- Pin the scale so iOS Safari doesn't auto-zoom when an input/textarea is focused
+     (the prototypes are previewed on real phones; native RN apps don't zoom). -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<!-- Home-screen ("Add to Home Screen") standalone web app. `black-translucent` runs the page
+     full-bleed UNDER the iOS status bar (no default light strip above the header). Note: iOS forces
+     the status-bar text to white in this mode. Re-add the home-screen icon to pick up these tags. -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  html,
+  body {
+    font-family:
+      'Poppins', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  /* Fill the full screen incl. the bottom safe area so fullscreen screens (whose Phone wrapper is
+     absolute inset:0) reach the physical bottom on an iOS home-screen app — otherwise the content
+     stops short and the floating bottom bar appears to hover with a gap below it. */
+  html,
+  body,
+  #storybook-root {
+    height: 100%;
+    min-height: 100dvh;
+    margin: 0;
+  }
+  /* The screens' fixed full-screen `Phone` wrapper takes its no-keyboard height from HERE (it sets no
+     inline height in that state), so we can express a CSS cascade that RNW's single inline value can't:
+     `100vh` is the floor that keeps the wrapper full-screen even on engines without `dvh` (iOS < 15.4,
+     where a lone `height:100dvh` is dropped and the fixed element would collapse to content height);
+     `100dvh` overrides on supporting engines — the home-indicator-inclusive dynamic viewport that reaches
+     the PHYSICAL bottom for full bottom bleed under `viewport-fit=cover`. When the keyboard is up the
+     wrapper sets an inline height that overrides this, so a sheet stays just above the keyboard. */
+  [data-phone-frame] {
+    height: 100vh;
+    height: 100dvh;
+  }
+  /* Lock the page frame against the iOS rubber-band. On the funnel, pages whose content fits the
+     viewport (no inner overflow) otherwise let a swipe leak to the document and bounce the WHOLE
+     screen — so they felt "wrong" vs a page like Popular Add-ons whose content scrolls. This kills
+     only the overscroll bounce + scroll-chaining (it does NOT disable scrolling), so every screen
+     behaves the same: the frame stays put and the inner content scrolls when it overflows. */
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+  /* No default browser focus ring or mobile tap-highlight — our controls render
+     their own focus / selected / pressed states. Matches the native app (no web outline). */
+  *:focus,
+  *:focus-visible,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none !important;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+</style>
+<script>
+  // Storybook injects its own `<meta name="viewport">` (without `viewport-fit=cover`). Full-bleed
+  // under the iOS status bar needs cover, and multiple viewport metas are handled inconsistently —
+  // so collapse them to a single canonical one (immediately and after the DOM settles).
+  (function () {
+    function canonicalViewport() {
+      document.querySelectorAll('meta[name="viewport"]').forEach(function (m) {
+        m.parentNode && m.parentNode.removeChild(m);
+      });
+      var m = document.createElement('meta');
+      m.setAttribute('name', 'viewport');
+      m.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover');
+      document.head.appendChild(m);
+    }
+    canonicalViewport();
+    document.addEventListener('DOMContentLoaded', canonicalViewport);
+  })();
+</script>

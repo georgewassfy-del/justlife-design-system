@@ -1,0 +1,15 @@
+# Justlife Design System — code ownership
+# The design-system maintainers protect the integrity of the system.
+# Replace the placeholder team handle with your real GitHub team.
+
+*                               @justlife/design-system-maintainers
+
+# Tokens are a system-level decision — extra scrutiny.
+/packages/tokens/               @justlife/design-system-maintainers
+/packages/tokens/src/           @justlife/design-system-maintainers
+
+# Governance & architecture
+/docs/                          @justlife/design-system-maintainers
+/.github/                       @justlife/design-system-maintainers
+/eslint.config.mjs              @justlife/design-system-maintainers
+/tools/eslint-plugin-justlife/  @justlife/design-system-maintainers
