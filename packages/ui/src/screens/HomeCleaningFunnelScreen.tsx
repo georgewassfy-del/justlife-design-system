@@ -4,7 +4,6 @@ import {
   Header,
   PageShell,
   ScreenAurora,
-  Badge,
   Card,
   CheckoutBar,
   BottomSheet,
@@ -345,7 +344,7 @@ function AddOnsStep() {
         }}
       >
         {ADDONS.map((a) => (
-          <View key={a.title} style={{ width: '48%' }}>
+          <View key={a.title} style={{ width: '32%' }}>
             <AddOnsCard
               title={a.title}
               price={a.price}
@@ -376,12 +375,15 @@ function ProChoice({
   onPress,
   avatar,
   name,
+  nameColor = 'primary',
   subtitle,
 }: {
   selected: boolean;
   onPress: () => void;
   avatar: React.ReactNode;
   name: string;
+  /** Name colour — photo pros use brand (per Figma); Auto-assign stays primary. */
+  nameColor?: 'primary' | 'brand';
   subtitle: React.ReactNode;
 }) {
   const t = useTheme();
@@ -406,7 +408,7 @@ function ProChoice({
       })}
     >
       {avatar}
-      <Text variant="labelBase" color="primary" numberOfLines={1}>
+      <Text variant="labelBase" color={nameColor} numberOfLines={1}>
         {name}
       </Text>
       {subtitle}
@@ -494,24 +496,45 @@ function DateTimeStep({ onPolicyDetails }: { onPolicyDetails: () => void }) {
               selected={pro === p.key}
               onPress={() => setPro(p.key)}
               name={p.name}
+              nameColor="brand"
               avatar={
-                <ProAvatar bg={t.avatar.bg.neutral}>
-                  <Image source={{ uri: p.photo }} resizeMode="cover" style={{ width: '100%', height: '100%' }} />
-                </ProAvatar>
+                <View>
+                  <ProAvatar bg={t.avatar.bg.neutral}>
+                    <Image source={{ uri: p.photo }} resizeMode="cover" style={{ width: '100%', height: '100%' }} />
+                  </ProAvatar>
+                  {/* Rating — bare gold star + number on a small surface chip, overlaid on the photo's
+                      top-right corner (per Figma; replaces the old yellow Badge pill below the photo). */}
+                  <View
+                    style={{
+                      position: 'absolute',
+                      top: -t.size['2'],
+                      right: -t.size['4'],
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      gap: t.size['2'],
+                      paddingHorizontal: t.size['4'],
+                      paddingVertical: t.size['2'],
+                      borderRadius: t.radius.pill,
+                      backgroundColor: t.background.surface,
+                      borderWidth: t.borderWidth.hairline,
+                      borderColor: t.border.default,
+                    }}
+                  >
+                    <Icon name="star" size="xs" color={t.badge.bg.primary} fill={t.badge.bg.primary} />
+                    <Text variant="labelXXSmall" color="primary" accessibilityLabel={`Rated ${p.rating}`}>
+                      {p.rating}
+                    </Text>
+                  </View>
+                </View>
               }
               subtitle={
-                <VStack gap="xs" align="center">
-                  <Badge tone="rating" icon="star" iconFilled accessibilityLabel={`Rated ${p.rating}`} style={{ alignSelf: 'center' }}>
-                    {p.rating}
-                  </Badge>
-                  {/* Returning-customer line — only when this pro served you before. The date is always
-                      forced onto the second line ("Served you on" / "24 Nov"). */}
-                  {p.servedOn ? (
-                    <Text variant="bodyMicro" align="center" color="secondary" numberOfLines={2}>
-                      {`Served you on\n${p.servedOn}`}
-                    </Text>
-                  ) : null}
-                </VStack>
+                // Returning-customer line — only when this pro served you before. The date is always
+                // forced onto the second line ("Served you on" / "24 Nov").
+                p.servedOn ? (
+                  <Text variant="bodyMicro" align="center" color="secondary" numberOfLines={2}>
+                    {`Served you on\n${p.servedOn}`}
+                  </Text>
+                ) : null
               }
             />
           ))}
