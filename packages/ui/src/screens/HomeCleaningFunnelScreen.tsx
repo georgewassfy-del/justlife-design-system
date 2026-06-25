@@ -10,7 +10,6 @@ import {
   StepIndicator,
   SpecialInstructions,
   AddOnsCard,
-  InfoCard,
   PaymentMethodCard,
   PaymentLogo,
   PriceDetails,
@@ -358,9 +357,9 @@ function AddOnsStep() {
         ))}
       </View>
       <View style={{ paddingHorizontal: t.space.md }}>
-        <InfoCard tone="info" icon="info">
+        <Disclaimer icon="info" action={{ label: 'Details', onPress: () => {} }}>
           The duration of the session may change based on your selection.
-        </InfoCard>
+        </Disclaimer>
       </View>
     </VStack>
   );
@@ -457,11 +456,23 @@ function DateTimeStep({ onPolicyDetails }: { onPolicyDetails: () => void }) {
               </Text>
             </Pressable>
           </HStack>
-          {/* Current frequency — informative only. The "Change" link is the action, so this is a plain
-              value line (icon + text), not a tappable/selected pill. */}
-          <HStack gap="xs" align="center">
-            <Icon name="refresh-cw" size="sm" color={t.icon.brand} />
-            <Text variant="labelBase">One Time Service</Text>
+          {/* Current frequency value as a filled brand pill (per Figma). Informative only — the
+              "Change" link above is the action. */}
+          <HStack
+            gap="xs"
+            align="center"
+            style={{
+              alignSelf: 'flex-start',
+              backgroundColor: t.background.brandDefault,
+              borderRadius: t.radius.pill,
+              paddingHorizontal: t.space.sm,
+              paddingVertical: t.size['4'],
+            }}
+          >
+            <Icon name="refresh-cw" size="sm" color={t.text.onBrand} />
+            <Text variant="labelBase" style={{ color: t.text.onBrand }}>
+              One Time Service
+            </Text>
           </HStack>
         </View>
       </View>
@@ -856,9 +867,9 @@ function CheckoutStep({
           trailingTone="action"
           onPress={onChangePayment}
         />
-        <InfoCard tone="info" icon="info">
+        <Disclaimer icon="info" action={{ label: 'Details', onPress: () => {} }}>
           The session amount will be reserved on your card. You will be charged once the session is completed.
-        </InfoCard>
+        </Disclaimer>
       </VStack>
 
       <VStack gap="sm">

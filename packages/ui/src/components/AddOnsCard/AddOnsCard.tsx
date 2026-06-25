@@ -95,14 +95,14 @@ export const AddOnsCard = forwardRef<ViewType, AddOnsCardProps>(function AddOnsC
           </Pressable>
         ) : null}
         <HStack gap="xs" align="center">
+          <Text variant="labelXSmall">
+            {currency} {price}
+          </Text>
           {oldPrice != null ? (
             <Text variant="bodyXSmall" color="secondary" style={{ textDecorationLine: 'line-through' }}>
               {currency} {oldPrice}
             </Text>
           ) : null}
-          <Text variant="labelXSmall">
-            {currency} {price}
-          </Text>
         </HStack>
       </VStack>
     </View>
