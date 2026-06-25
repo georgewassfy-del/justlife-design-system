@@ -40,14 +40,13 @@ import { assetUrl } from '../assets/assets';
  * native build floated the hero behind an overlay `ScrollView`, whose pan recogniser ate the swipe.)
  */
 
-// Carousel slides — each is its own promo (media + discount + headline) so swiping changes the content.
-// Slide 1 is the approved Figma promo; slides 2-4 are GREEN media + clearly-marked placeholder promos
-// (the Figma only specified the first slide).
-const SLIDES: { bg: string; discount: string; headline: string }[] = [
-  { bg: '#22C55E', discount: '30% off up to D100', headline: 'Solo or duo Massages & facials\nright at home.' },
-  { bg: '#16A34A', discount: 'Promo 2', headline: 'Carousel slide 2' },
-  { bg: '#1FB457', discount: 'Promo 3', headline: 'Carousel slide 3' },
-  { bg: '#15803D', discount: 'Promo 4', headline: 'Carousel slide 4' },
+// Carousel slides — each is its own promo banner (real image + discount + headline) so swiping changes
+// the content. Images are the DS `banner/thank-you-*` assets, resolved through the manifest. Slide 1 is
+// the approved Figma promo; slides 2-3 reuse the same overlay structure (copy is still placeholder).
+const SLIDES: { image: string; discount: string; headline: string }[] = [
+  { image: assetUrl('banner/thank-you-01'), discount: '30% off up to D100', headline: 'Solo or duo Massages & facials\nright at home.' },
+  { image: assetUrl('banner/thank-you-02'), discount: 'Promo 2', headline: 'Carousel slide 2' },
+  { image: assetUrl('banner/thank-you-03'), discount: 'Promo 3', headline: 'Carousel slide 3' },
 ];
 // Assigned-professional card image, resolved from the DS asset manifest (thank-you-card asset — a
 // complete composed card: photo + shape + rating + name baked in).
@@ -174,14 +173,16 @@ function HeroChrome({
       {/* Each slide is its own promo — swiping (or auto-advance) changes both the media and the content. */}
       <ScrollView ref={scRef} horizontal pagingEnabled showsHorizontalScrollIndicator={false} scrollEventThrottle={16} onScroll={onScroll} style={{ flex: 1 }}>
         {SLIDES.map((s, i) => (
-          <View key={i} style={{ width: w || 375, height: '100%', backgroundColor: s.bg }}>
-            {/* Media placeholder label (image OR video → GREEN). */}
-            <VStack align="center" style={{ position: 'absolute', top: safeTop + t.size['72'], left: 0, right: 0 }}>
-              <Icon name="image" size="xl" color="#FFFFFF" />
-              <Text variant="labelXSmall" align="center" style={{ color: '#FFFFFF', marginTop: t.space.xs }}>
-                Image / video {i + 1}
-              </Text>
-            </VStack>
+          <View key={i} style={{ width: w || 375, height: '100%', backgroundColor: t.background.secondary, overflow: 'hidden' }}>
+            {/* Real promo banner image fills the slide (replaces the old green placeholder). */}
+            <Image
+              source={{ uri: s.image }}
+              resizeMode="cover"
+              accessibilityLabel={`Promo banner ${i + 1}`}
+              style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0, width: '100%', height: '100%' }}
+            />
+            {/* Bottom scrim keeps the white promo text/buttons legible over bright photos. */}
+            <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '55%', backgroundColor: 'rgba(0, 0, 0, 0.32)' }} />
             {/* Per-slide promo (discount + headline + CTAs) — these slide with the media. The dots do
                 NOT live here; `paddingBottom` reserves the strip the fixed dots overlay occupies. */}
             <VStack gap="sm" align="center" style={{ position: 'absolute', left: t.space.md, right: t.space.md, bottom: PROMO_BOTTOM, paddingBottom: t.size['16'] }}>
