@@ -3,11 +3,9 @@ import { Image, Pressable, ScrollView, TextInput, View } from 'react-native';
 import {
   Header,
   PageShell,
-  ScreenAurora,
   Card,
   CheckoutBar,
   BottomSheet,
-  StepIndicator,
   SpecialInstructions,
   AddOnsCard,
   PaymentMethodCard,
@@ -514,7 +512,7 @@ function DateTimeStep({ onPolicyDetails }: { onPolicyDetails: () => void }) {
                     <Image source={{ uri: p.photo }} resizeMode="cover" style={{ width: '100%', height: '100%' }} />
                   </ProAvatar>
                   {/* Rating — bare gold star + number on a small surface chip, overlaid on the photo's
-                      top-right corner (per Figma; replaces the old yellow Badge pill below the photo). */}
+                      top-right corner (per Figma). */}
                   <View
                     style={{
                       position: 'absolute',
@@ -853,18 +851,24 @@ function CheckoutStep({
       </Card>
 
       <VStack gap="sm">
-        <HStack gap="xs" align="center">
-          <Text variant="labelMedium">Payment Method</Text>
-          <Icon name="info" size="sm" color={t.icon.secondary} />
+        {/* Per Figma: section label + "Change" link on one row, with the active method shown below as a
+            selected (brand-tinted + radio) card rather than a plain row with an inline Change link. */}
+        <HStack justify="space-between" align="center">
+          <HStack gap="xs" align="center">
+            <Text variant="labelMedium">Payment Method</Text>
+            <Icon name="info" size="sm" color={t.icon.secondary} />
+          </HStack>
+          <Pressable accessibilityRole="button" accessibilityLabel="Change payment method" onPress={onChangePayment}>
+            <Text variant="labelXSmall" color="link">
+              Change
+            </Text>
+          </Pressable>
         </HStack>
-        {/* The chosen method with its "Change" action inside the card (tap the row to switch) —
-            no radio, since there's a single current method, not a choice among visible options. */}
         <PaymentMethodCard
           icon={<PaymentLogo name="mastercard" label="Mastercard" />}
           title="Credit / Debit Card"
           number="•••• •••• •••• 6409"
-          trailing="Change"
-          trailingTone="action"
+          selected
           onPress={onChangePayment}
         />
         <Disclaimer icon="info" action={{ label: 'Details', onPress: () => {} }}>
@@ -1017,30 +1021,31 @@ export function HomeCleaningFunnelScreen({
         pinned
         // Frequency step: grow the scroll content so the justlife Promise can sit at the bottom.
         contentGrow={cfg.footerKind === 'cta'}
-        band={<ScreenAurora />}
+        // Flat background per Figma: a plain warm-white band (no ScreenAurora) that only reserves the
+        // header's height. The content card is flattened (no rounded top, no seam shadow) so the screen
+        // reads as a white header + hairline divider + flat warm-white body, not a layered aurora sheet.
+        band={<View style={{ flex: 1, backgroundColor: t.background.canvas }} />}
         bandHeight={bandHeight}
+        cardRadius={0}
+        cardElevation="none"
         // Card-first pages: top gap = side padding (space.md). Text-first: more room (space.lg).
         contentInsetTop={cfg.firstItem === 'card' ? t.space.md : t.space.lg}
         renderHeader={() => (
           <Header
             title={cfg.title}
             titleVariant="titleLarge"
-            aside={<StepIndicator current={step} total={TOTAL_STEPS} />}
-            actions={
-              cfg.heart
-                ? [
-                    {
-                      icon: 'heart',
-                      accessibilityLabel: liked ? 'Remove from favourites' : 'Save to favourites',
-                      // Default = dark outline; tapped = filled red favourite.
-                      tone: liked ? 'danger' : 'default',
-                      filled: liked,
-                      onPress: () => setLiked((v) => !v),
-                    },
-                  ]
-                : undefined
-            }
-            overMedia
+            // Per Figma: back + title + search + heart on every step, no step indicator. The header is an
+            // opaque white surface with a hairline divider (overMedia omitted). Search is a placeholder.
+            actions={[
+              { icon: 'search', accessibilityLabel: 'Search', onPress: () => {} },
+              {
+                icon: 'heart',
+                accessibilityLabel: liked ? 'Remove from favourites' : 'Save to favourites',
+                tone: liked ? 'danger' : 'default',
+                filled: liked,
+                onPress: () => setLiked((v) => !v),
+              },
+            ]}
             safeAreaTop={safeAreaTop}
             onBack={back}
           />
