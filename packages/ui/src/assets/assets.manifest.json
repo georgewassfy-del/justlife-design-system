@@ -18,11 +18,11 @@
     "shape",
     "thank-you-card"
   ],
-  "count": 239,
+  "count": 242,
   "countByKind": {
     "add-on": 6,
     "avatar": 24,
-    "banner": 5,
+    "banner": 8,
     "flag": 6,
     "icon": 100,
     "icon3d": 41,
@@ -207,6 +207,21 @@
     },
     "banner/pest-control": {
       "path": "Photos (export PNG)/common-sv-pest-control-en-50pestc.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "banner/thank-you-01": {
+      "path": "Photos (export PNG)/Thank-you-banner-1.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "banner/thank-you-02": {
+      "path": "Photos (export PNG)/Thank-you-banner-2.png",
+      "kind": "banner",
+      "format": "png"
+    },
+    "banner/thank-you-03": {
+      "path": "Photos (export PNG)/Thank-you-banner-3.png",
       "kind": "banner",
       "format": "png"
     },
