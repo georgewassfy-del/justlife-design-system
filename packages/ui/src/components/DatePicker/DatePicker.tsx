@@ -9,6 +9,8 @@ export interface DatePickerDay {
   day: string;
   /** Date-of-month value — also the selection key. */
   date: number | string;
+  /** Optional month label, e.g. "Feb", shown as a caption under the date when present. */
+  month?: string;
   disabled?: boolean;
 }
 
@@ -42,7 +44,7 @@ export function DatePicker({ days, value, onChange }: DatePickerProps) {
             selected={selected}
             disabled={d.disabled}
             onPress={() => onChange(d.date)}
-            accessibilityLabel={`${d.day} ${d.date}`}
+            accessibilityLabel={`${d.day} ${d.date}${d.month ? ` ${d.month}` : ''}`}
             style={{ width: t.size['56'], paddingVertical: t.space.sm, gap: t.size['2'] }}
           >
             {/* Weekday is a small muted caption above the date number (the date is the chip's main label). */}
@@ -52,6 +54,13 @@ export function DatePicker({ days, value, onChange }: DatePickerProps) {
             <Text variant="labelBase" style={{ color: selected ? t.text.onBrand : t.text.primary }}>
               {d.date}
             </Text>
+            {/* Optional month caption under the date (per Figma). Omitted entirely when not supplied,
+                so existing month-less usages render exactly as before. */}
+            {d.month ? (
+              <Text variant="bodyMicro" style={{ color: selected ? t.text.onBrand : t.text.secondary }}>
+                {d.month}
+              </Text>
+            ) : null}
           </Selectable>
         );
       })}

@@ -28,4 +28,11 @@ describe('DatePicker', () => {
     const { container } = renderWithTheme(<DatePicker days={DAYS} value={19} onChange={() => {}} />);
     expect((await axe(container)).violations).toEqual([]);
   });
+
+  it('renders an optional month caption and includes it in the accessibility label', () => {
+    const daysWithMonth = DAYS.map((d) => ({ ...d, month: 'Feb' }));
+    renderWithTheme(<DatePicker days={daysWithMonth} value={19} onChange={() => {}} />);
+    expect(screen.getAllByText('Feb')).toHaveLength(daysWithMonth.length);
+    expect(screen.getByRole('button', { name: 'SUN 21 Feb' })).toBeInTheDocument();
+  });
 });

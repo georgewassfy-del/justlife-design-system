@@ -121,13 +121,13 @@ const ADDONS = [
   { title: 'Party Cleaning', price: 25, oldPrice: 30, img: assetUrl('add-on/party-cleaning') },
 ];
 const DAYS = [
-  { day: 'FRI', date: 19 },
-  { day: 'SAT', date: 20 },
-  { day: 'SUN', date: 21 },
-  { day: 'MON', date: 22 },
-  { day: 'TUE', date: 23 },
-  { day: 'WED', date: 24 },
-  { day: 'THU', date: 25 },
+  { day: 'FRI', date: 19, month: 'Feb' },
+  { day: 'SAT', date: 20, month: 'Feb' },
+  { day: 'SUN', date: 21, month: 'Feb' },
+  { day: 'MON', date: 22, month: 'Feb' },
+  { day: 'TUE', date: 23, month: 'Feb' },
+  { day: 'WED', date: 24, month: 'Feb' },
+  { day: 'THU', date: 25, month: 'Feb' },
 ];
 const SLOTS = ['12:30 – 13:00', '13:00 – 13:30', '13:30 – 14:00', '14:00 – 14:30'];
 
@@ -286,11 +286,11 @@ function ServiceStep({ instructions, onEditInstructions }: { instructions: strin
   return (
     <VStack gap="lg" style={{ paddingBottom: t.space.lg }}>
       <Question title="How many hours do you need your professional to stay?" info>
-        <NumberSelector count={8} value={hours} onChange={setHours} />
+        <NumberSelector count={7} value={hours} onChange={setHours} />
       </Question>
 
       <Question title="How many professionals do you need?">
-        <NumberSelector count={4} value={pros} onChange={setPros} />
+        <NumberSelector count={3} value={pros} onChange={setPros} />
       </Question>
 
       <VStack gap="sm" style={{ paddingHorizontal: t.space.md }}>

@@ -34,3 +34,19 @@ export const Default: Story = {
     return <DatePicker days={DAYS} value={date} onChange={setDate} />;
   },
 };
+
+const DAYS_WITH_MONTH = DAYS.map((d) => ({ ...d, month: 'Feb' }));
+
+export const WithMonth: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: 'Each cell shows weekday + date + an optional `month` caption (used on the booking funnel).',
+      },
+    },
+  },
+  render: () => {
+    const [date, setDate] = useState<number | string>(19);
+    return <DatePicker days={DAYS_WITH_MONTH} value={date} onChange={setDate} />;
+  },
+};
